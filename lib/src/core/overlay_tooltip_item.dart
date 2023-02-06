@@ -9,6 +9,7 @@ abstract class OverlayTooltipItemImpl extends StatefulWidget {
   final TooltipVerticalPosition tooltipVerticalPosition;
   final TooltipHorizontalPosition tooltipHorizontalPosition;
   final int displayIndex;
+  final Color? color;
 
   OverlayTooltipItemImpl(
       {Key? key,
@@ -59,7 +60,7 @@ class _OverlayTooltipItemImplState extends State<OverlayTooltipItemImpl> {
   Widget build(BuildContext context) {
     return Material(
       key: widgetKey,
-      color: Colors.transparent,
+      color: widget.color ?? Colors.transparent,
       child: widget.child,
     );
   }
