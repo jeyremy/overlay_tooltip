@@ -17,7 +17,9 @@ abstract class OverlayTooltipItemImpl extends StatefulWidget {
       required this.child,
       required this.tooltip,
       required this.tooltipVerticalPosition,
-      required this.tooltipHorizontalPosition})
+      required this.tooltipHorizontalPosition,
+      this.color
+      })
       : super(key: key);
 
   @override
