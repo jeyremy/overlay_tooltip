@@ -76,11 +76,15 @@ class OverlayTooltipItem extends OverlayTooltipItemImpl {
   /// This determines the order of display when overlay is started
   final int displayIndex;
 
+  /// This determines the custom color of the child's background
+  final Color? color;
+
   OverlayTooltipItem(
       {Key? key,
       required this.displayIndex,
       required this.child,
       required this.tooltip,
+      this.color,
       this.tooltipVerticalPosition = TooltipVerticalPosition.BOTTOM,
       this.tooltipHorizontalPosition = TooltipHorizontalPosition.WITH_WIDGET})
       : super(
@@ -88,6 +92,7 @@ class OverlayTooltipItem extends OverlayTooltipItemImpl {
             child: child,
             displayIndex: displayIndex,
             tooltip: tooltip,
+            color: color,
             tooltipVerticalPosition: tooltipVerticalPosition,
             tooltipHorizontalPosition: tooltipHorizontalPosition);
 }
